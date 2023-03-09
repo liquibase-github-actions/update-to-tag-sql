@@ -26,7 +26,7 @@ message UpdateToTagSqlRequest {
   optional bool output_default_catalog = 10; // Control whether names of objects in the default catalog are fully qualified or not. If true they are. If false, only objects outside the default catalog are fully qualified
   optional bool output_default_schema = 11; // Control whether names of objects in the default schema are fully qualified or not. If true they are. If false, only objects outside the default schema are fully qualified
   optional string password = 12; // Password to use to connect to the database
-  string tag = 13; // *required* The tag to genenerate SQL up to
+  string tag = 13; // *required* The tag to generate SQL up to
   string url = 14; // *required* The JDBC database connection URL
   optional string username = 15; // Username to use to connect to the database
   liquibase.GlobalOptions global_options = 16;

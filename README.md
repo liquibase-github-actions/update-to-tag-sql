@@ -6,14 +6,14 @@ Generate the SQL to deploy changes up to the tag
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-to-tag-sql@v4.19.1
+- uses: liquibase-github-actions/update-to-tag-sql@v4.20.0
   with:
     # The root changelog
     # string
     # Required
     changelogFile: ""
 
-    # The tag to genenerate SQL up to
+    # The tag to generate SQL up to
     # string
     # Required
     tag: ""
@@ -95,7 +95,7 @@ The liquibase update to tag sql action accepts all valid liquibase global option
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-to-tag-sql@v4.19.1
+  - uses: liquibase-github-actions/update-to-tag-sql@v4.20.0
     with:
       changelogFile: ""
       tag: ""
