@@ -6,7 +6,7 @@ Generate the SQL to deploy changes up to the tag
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-to-tag-sql@v4.21.0
+- uses: liquibase-github-actions/update-to-tag-sql@v4.21.1
   with:
     # The root changelog
     # string
@@ -23,6 +23,11 @@ steps:
     # Required
     url: ""
 
+    # 
+    # string
+    # Optional
+    changeExecListener: ""
+
     # Fully-qualified class which specifies a ChangeExecListener
     # string
     # Optional
@@ -33,10 +38,20 @@ steps:
     # Optional
     changeExecListenerPropertiesFile: ""
 
+    # 
+    # string
+    # Optional
+    changelogParameters: ""
+
     # Changeset contexts to match
     # string
     # Optional
     contexts: ""
+
+    # 
+    # string
+    # Optional
+    database: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -78,6 +93,11 @@ steps:
     # Optional
     password: ""
 
+    # 
+    # bool
+    # Optional
+    skipDatabaseStep: ""
+
     # Username to use to connect to the database
     # string
     # Optional
@@ -95,7 +115,7 @@ The liquibase update to tag sql action accepts all valid liquibase global option
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-to-tag-sql@v4.21.0
+  - uses: liquibase-github-actions/update-to-tag-sql@v4.21.1
     with:
       changelogFile: ""
       tag: ""
